@@ -4,7 +4,7 @@ title:      "Mysql优化"
 subtitle:   ""
 date:       2018-06-16 20:00:00
 author:     "Sean"
-header-img: "img/post-mysql.jgp"
+header-img: "img/in-post/post-mysql.jgp"
 tags:
     - Mysql
 ---

@@ -75,7 +75,7 @@ layout: default
                     {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
+                        上一篇<br>
                         <span>{{page.previous.title}}</span>
                         </a>
                     </li>
@@ -83,7 +83,7 @@ layout: default
                     {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
+                        下一篇<br>
                         <span>{{page.next.title}}</span>
                         </a>
                     </li>
@@ -91,19 +91,19 @@ layout: default
                 </ul>
 
 
-                {% if site.disqus_username %}
-                <!-- disqus 评论框 start -->
+               <!-- {% if site.disqus_username %}
+                &lt;!&ndash; disqus 评论框 start &ndash;&gt;
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- disqus 评论框 end -->
-                {% endif %}
+                &lt;!&ndash; disqus 评论框 end &ndash;&gt;
+                {% endif %}-->
 
-                {% if site.netease_comment %}
-                <!-- 网易云跟帖 评论框 start -->
+                <!--{% if site.netease_comment %}
+                &lt;!&ndash; 网易云跟帖 评论框 start &ndash;&gt;
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-                <!-- 网易云跟帖 评论框 end -->
-                {% endif %}
+                &lt;!&ndash; 网易云跟帖 评论框 end &ndash;&gt;
+                {% endif %}-->
             </div>  
 
     <!-- Side Catalog Container -->

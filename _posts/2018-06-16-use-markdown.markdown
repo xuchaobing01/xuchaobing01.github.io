@@ -1,13 +1,13 @@
 ---
 layout:       post
 title:        "Markdown 基础使用"
-subtitle:     "Upgrading Ele.me to Progressive Web App"
-date:         2017-07-12 12:00:00
-author:       "Hux"
+subtitle:     "Markdown的基础使用语法，如何去使用Markdown"
+date:         2018-06-16 12:00:00
+author:       "Sean"
 header-img:   "img/in-post/post-eleme-pwa/eleme-at-io.jpg"
 header-mask:  0.3
 catalog:      true
-multilingual: true
+multilingual: false
 tags:
     - Markdown
 ---
@@ -16,8 +16,7 @@ tags:
 
 Markdown是一种轻量级的**标记语言**，文本编辑器，被广泛运用于写作上，规范文本格式。类似的编辑器还有百度[UEditor](http://ueditor.baidu.com/website/onlinedemo.html) .
 
-<!--[Markdown【基础篇】地址：](https://worktile.com/blog/skills/markdown)
-[https://worktile.com/blog/skills/markdown](https://worktile.com/blog/skills/markdown)-->
+<!--[Markdown【基础篇】地址：](https://worktile.com/blog/skills/markdown)-->
 
 # 1. 标题（共六级标题，一般也就用到三级） #
 

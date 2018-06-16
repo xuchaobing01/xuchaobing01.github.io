@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Mysql优化"
-subtitle:   ""
+subtitle:   "来啊，让你的查询更快吧！"
 date:       2018-06-16 20:00:00
 author:     "Sean"
 header-img: "img/post-bg-universe.jpg"

@@ -4,12 +4,12 @@ title:      "Mysql优化"
 subtitle:   ""
 date:       2018-06-16 20:00:00
 author:     "Sean"
-header-img: "img/in-post/post-mysql.jgp"
+header-img: "img/post-bg-universe.jpg"
 tags:
     - Mysql
 ---
 
-
+![](https://raw.githubusercontent.com/xuchaobing01/xuchaobing01.github.io/master/img/in-post/post-markdown.jpg)
 
 **1. COUNT** 
 

@@ -9,8 +9,6 @@ tags:
     - Mysql
 ---
 
-![](https://raw.githubusercontent.com/xuchaobing01/xuchaobing01.github.io/master/img/in-post/post-markdown.jpg)
-
 **1. COUNT** 
 
 `count(1)`比`count(*)`快
@@ -21,3 +19,6 @@ tags:
 SELECT count(*) FROM table;//2.229s
 SELECT count(*) FROM table;//0.638s
 ```
+
+![](https://raw.githubusercontent.com/xuchaobing01/xuchaobing01.github.io/master/img/in-post/post-mysql.jpg)
+

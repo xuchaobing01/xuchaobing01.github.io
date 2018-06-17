@@ -20,10 +20,19 @@ if [[ $processNum -eq 0 ]]
 then
 
     nohup /usr/local/php/bin/php /www/project/cli.php Cron/SyncQueue/consumer >>/data/logs/processName_`date +%Y%m%d`.log &
-
 fi
 
 //注意：shell脚本的名字不要和进程名同名，否则Linux执行文件也算进程，你的进程始终大于0，你的脚本始终无法执行。
 ```
+
+如果你需要你的脚本每5分钟去执行一次，只需要
+
+`crontab -e`
+
+然后添加
+
+`*/5 * * * * /home/task/taskName.sh`
+
+**2. 统计文件或文件夹数**
 
 

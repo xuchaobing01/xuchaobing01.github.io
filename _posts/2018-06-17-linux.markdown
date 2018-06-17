@@ -19,7 +19,7 @@ processNum = `ps -ef|grep processName|grep -v grep|wc -l`;
 if [[ $processNum -eq 0 ]]
 then
 
-    nohup /usr/local/php/bin/php /www/project/cli.php Cron/SyncQueue/consumer >>/data/logs/processName_`date +%Y%m%d`.log &
+    nohup /usr/local/php/bin/php /www/project/cli.php Cron/SyncQueue/consumer >>/data/logs/processName_`date +%Y%m%d`.log &       
 fi
 
 //注意：shell脚本的名字不要和进程名同名，否则Linux执行文件也算进程，你的进程始终大于0，你的脚本始终无法执行。

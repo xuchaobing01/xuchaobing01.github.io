@@ -18,7 +18,8 @@ processNum = `ps -ef|grep processName|grep -v grep|wc -l`;
 
 if [[ $processNum -eq 0 ]]
 then
-    
+
+
     nohup /usr/local/php/bin/php /www/project/cli.php Cron/SyncQueue/consumer >>/data/logs/processName_`date +%Y%m%d`.log &
 fi
 
@@ -37,29 +38,29 @@ fi
 
 - 统计当前文件夹下文件个数，包括子文件夹里的
 
-> ls -lR|grep "^-"|wc -l
+> `ls -lR|grep "^-"|wc -l`
 
 - 统计当前文件夹下目录个数，包括子文件夹里的
 
-> ls -lR|grep "^d"|wc -l
+> `ls -lR|grep "^d"|wc -l`
 
 - 统计当前文件夹下文件个数
 
-> ls -l|grep "^-"|wc -l
+> `ls -l|grep "^-"|wc -l`
 
 - 统计当前文件夹下目录个数
 
-> ls -l|grep "^d"|wc -l
+> `ls -l|grep "^d"|wc -l`
 
 附：
 
 统计输出信息的行数
 
-> wc -l
+> `wc -l`
 
 将长列表输出信息进行过滤，只保留匹配中目标，如果只保留目录就是`^d`
 
-> grep "^-"
+> `grep "^-"`
 
 
 

@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      "Linux篇"
+subtitle:   "玩转那些实用的Linux命令！"
+date:       2018-06-17 10:00:00
+author:     "Sean"
+header-img: "img/post-bg-unix-linux.jpg"
+tags:
+    - Linux
+---
+
+**1. `Shell`判断一个进程不存在执行，存在不执行** 
+
+```
+#!/bin/bash
+
+processNum = `ps -ef|grep processName|grep -v grep|wc -l`;
+
+if [[ $processNum -eq 0 ]]
+then
+    nohup /usr/local/php/bin/php /www/project/cli.php Cron/SyncQueue/consumer >>/data/logs/processName_`date +%Y%m%d`.log &
+fi
+
+//注意：shell脚本的名字不要和进程名同名，否则Linux执行文件也算进程，你的进程始终大于0，你的脚本始终无法执行。
+```
+
+

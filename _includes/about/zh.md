@@ -8,14 +8,13 @@
 
 喜欢跑步、打球、游泳、旅游等。 
 
-<!--
+
 ##### 文章
 
-- [Upgrading to Progressive Web Apps][9] · [JSConf CN 上海 2017](http://2017.jsconf.cn/)
-- Building Progressive Web Apps · [CSDI 广州 2017](http://www.csdisummit.com/)
-- The State of Progressive Web App · GDG IO Redux 北京 2017
-- 炒冷饭 · PWA 到底是个什么玩意？· Baidu HQ 北京 2017
+- [Linux篇][1] &emsp;                2018-06-17 · 北京
+- [Mysql优化][2] &emsp;              2018-06-16 · 北京
+- [Markdown 基础使用][3] &emsp;       2018-06-16 · 北京
 
-[1]: //huangxuan.me/2015/07/09/js-module-7day/
-[2]: //huangxuan.me/2015/12/28/css-sucks-2015/
--->
+[1]: https://xuchaobing01.github.io/2018/06/17/linux/
+[2]: https://xuchaobing01.github.io/2018/06/16/mysql/
+[3]: https://xuchaobing01.github.io/2018/06/16/use-markdown/

@@ -15,8 +15,6 @@ Like to run, play, swim, travel and so on.
 
 ##### Talks
 
-<br/>
-
 - [Linux sections][1] &emsp;&emsp;           17th June,2018 · Beijing
 - [Mysql optimization][2] &ensp;       16th June,2018 · Beijing
 - [Markdown basic use][3] &ensp;       16th June,2018 · Beijing

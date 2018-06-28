@@ -12,11 +12,10 @@ Like to run, play, swim, travel and so on.
 
 
 <br/>
-<br/>
-<br/>
-<br/>
 
 ##### Talks
+
+<br/>
 
 - [Linux sections][1] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           17th June,2018 · Beijing
 - [Mysql optimization][2] &emsp;&emsp;&emsp;&emsp;       16th June,2018 · Beijing

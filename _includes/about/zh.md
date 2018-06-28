@@ -9,11 +9,10 @@
 喜欢跑步、打球、游泳、旅游等。 
 
 <br/>
-<br/>
-<br/>
-<br/>
 
 ##### 文章
+
+<br/>
 
 - [Linux篇][1] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;         2018-06-17 · 北京
 - [Mysql优化][2] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;              2018-06-16 · 北京

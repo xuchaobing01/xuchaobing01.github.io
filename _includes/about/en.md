@@ -17,9 +17,9 @@ Like to run, play, swim, travel and so on.
 
 <br/>
 
-- [Linux sections][1] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;           17th June,2018 · Beijing
-- [Mysql optimization][2] &emsp;&emsp;&emsp;&emsp;       16th June,2018 · Beijing
-- [Markdown basic use][3] &emsp;&emsp;&emsp;       16th June,2018 · Beijing
+- [Linux sections][1] &emsp;&emsp;           17th June,2018 · Beijing
+- [Mysql optimization][2] &ensp;       16th June,2018 · Beijing
+- [Markdown basic use][3] &ensp;       16th June,2018 · Beijing
 
 [1]: https://xuchaobing01.github.io/2018/06/17/linux/
 [2]: https://xuchaobing01.github.io/2018/06/16/mysql/

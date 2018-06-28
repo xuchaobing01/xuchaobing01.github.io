@@ -14,9 +14,9 @@
 
 <br/>
 
-- [Linux篇][1] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;         2018-06-17 · 北京
-- [Mysql优化][2] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;              2018-06-16 · 北京
-- [Markdown 基础使用][3] &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                               2018-06-16 · 北京
+- [Linux篇][1] &emsp;&emsp;         2018-06-17 · 北京
+- [Mysql优化][2] &emsp;              2018-06-16 · 北京
+- [Markdown 基础使用][3] &ensp;                               2018-06-16 · 北京
 
 [1]: https://xuchaobing01.github.io/2018/06/17/linux/
 [2]: https://xuchaobing01.github.io/2018/06/16/mysql/

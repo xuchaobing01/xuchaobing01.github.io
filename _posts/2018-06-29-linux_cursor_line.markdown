@@ -36,7 +36,7 @@ Alt+d删除光标后面的单词字符
 
     (reverse-i-search)`git commit -m ': git commit -m 'fix(.gitignore)'
 
-
+<br>
 - 1.2 方法二`history`命令
 
 ```

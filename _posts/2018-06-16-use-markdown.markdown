@@ -203,13 +203,12 @@ function index(){
 
 ## 12. 表格
 
-```
 语法：
-| uid | name | password | email |
 
+```
+| uid | name | password | email |
 |----|:-----:|:--------:|------:|
 | 1 | 张三 | 123456 | zhangsang@qq.com |
-
 | 2 | 李四 | eofj343hf | lisi@163.com |
 | 3 | 王二 | DoFj3D#43hf | wang@163.com |
 ```

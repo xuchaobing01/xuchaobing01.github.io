@@ -205,6 +205,7 @@ function index(){
 
 ```
 语法：
+
 |  uid  |  name  |  password  |      email        |
 |-------|:------:|:----------:|------------------:|
 | 1     | 张三   | 123456     | zhangsang@qq.com  |

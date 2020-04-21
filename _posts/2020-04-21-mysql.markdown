@@ -1,0 +1,102 @@
+---
+layout:     post
+title:      "Mysql"
+subtitle:   "Mysql数据库常用语句！"
+date:       2020-04-21 20:00:00
+author:     "Sean"
+header-img: "img/post-bg-mysql-2020.jpg"
+tags:
+    - Mysql
+---
+
+```
+mysqld.exe //服务
+mysql.exe //客户端
+mysql -h localhost -u username -p //连接数据库
+set names utf8;                   //设置字符集
+show databases;                   //查看所有库
+use 库名;                          //进入到某个库
+show tables;                      //查看所有的表
+desc 表名;                         //查看表结构
+show variables like '%charact%';  //查看变量
+set 变量名=值；                    //设置变量值
+explain select * from user where user ming ='san' \G;//查看索引是否发挥作用
+
+DML
+insert into 表名 (id,name) values(1,'lisi');    //增
+delete from 表名 where id=3;                    //删
+update 表名 set name='yumi' where id=2;         //改
+select * from user where id=2;                  //查
+select gid,gname from goods where gid in (select max(id) from goods group by cid); //where子查询
+select gid,gname,cid from (select gid,cd,gname from goods order by cid asc,gid desc) as tmp group by cid;//from子查询
+select * from catgory where exists (select * from goods where category.cid=goods.cid); //exists子查询
+select a.aname,b.bname from a inner join b on a.id=b.aid;             //连接查询
+select a.aname,b.bname from a left join  b on a.id=b.aid;             //左连接查询
+select a.aname,b.bname from a right join  b on a.id=b.aid;            //右连接查询
+(select name,age from user) union (select avator,sex from admin);     //union查询
+(select name,age from user) union all (select avator,sex from admin); //unionall查询
+
+DDl
+create table 表名(列名 列类型 属性 ....,) engine=Innodb default charset=utf8; //建表
+drop table 表名;                                                             //删表
+rename table oldname to newname;                                             //改表名
+show tables;                                                                 //查看表
+show table status \G                                                         //查看库中表的信息
+desc 表名;                                                                   //查看表结构
+show create table 表名;                                                      //查看建表结构
+delete from 表名;                                                            //删除表所有数据
+truncate 表名;                                                               //删除表重新建一个一样的表
+
+alter table 表名 add 列名 列类型 列属性...;                                    //添加列，默认在表的最后
+alter table 表名 add 列名 列类型 列属性... after 列名;                         //添加列,指定列后面
+alter table 表名 add 列名 列类型 列属性... first;                              //添加列为第1列
+alter table 表名 change 旧列名 新列名 新类型 列属性....;                        //改列 可改列名
+alter table 表名 modify 列名 新属性....;                                       //改列
+alter table 表名 drop [column] 列名;                                           //删除列
+
+show index from 表名;                                                        //查看索引
+show create table 表名;                                                      //查看索引
+alter table 表名 drop index 索引名;                                           //删除索引
+alter table 表名 add index/unique xm(xing,ming);                             //添加索引
+alter table 表名 add primary key(id);                                        //添加主键索引
+alter table 表名 drop primary key;                                           //删除主键索引
+
+create view vuser as select id,name from user;                               //创建视图
+show tables;                                                                 //查看视图
+desc 视图名；                                                                 //查看视图结构  
+show create view 视图名;                                                      //查看视图创建语句
+drop table 视图名;                                                            //删除视图
+show table status \G                                                         //查看库中表的信息                       
+
+索引类型
+primary key  //主键索引
+key          //普通索引
+unique key   //唯一索引
+fulltext     //全文索引
+
+事务
+start transaction; //开始事务
+commit;            //提交
+rollback;          //回滚
+
+where：=,!=或<>,<,<=,>,>=,in,between and,is null,is not null,like "ddd%__";
+优先级: and > or
+
+函数
+floor();
+rand();
+left();
+position();
+now();
+date_format(date,fmt);
+substring();
+concat();
+
+count();
+avg();
+sum();
+min();
+max();
+```
+
+

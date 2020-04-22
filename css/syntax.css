@@ -87,7 +87,11 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed !important;
-  right: 0!important;
-  left: 0!important;
-  z-index: 1030!important;
+  right: 0 !important;
+  left: 0 !important;
+  z-index: 1030 !important;
+  background-color:rgb(34, 34, 34) !important;
+  border-bottom-color:rgb(8, 8, 8) !important;
+  border-bottom-style:solid !important;
+  border-bottom-width:1px !important;
 }

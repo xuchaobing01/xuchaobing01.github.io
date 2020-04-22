@@ -1260,3 +1260,11 @@ img::-moz-selection {
   color: #ddd;
 }
 
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed !important;
+  right: 0!important;
+  left: 0!important;
+  z-index: 1030!important;
+}
+

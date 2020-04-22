@@ -4135,19 +4135,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 0;
   }
 }
-/*.navbar-fixed-top,
+.navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
-}*/
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed !important;
-  right: 0!important;
-  left: 0!important;
-  z-index: 1030!important;
 }
 @media (min-width: 768px) {
   .navbar-fixed-top,

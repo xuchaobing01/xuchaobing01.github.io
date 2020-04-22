@@ -89,6 +89,26 @@ drop table 视图名;                                                           
 show table status \G                                                         //查看库中表的信息                       
 ```
 
+**3. DCl** 
+
+```
+用户
+create user '用户名'@'主机名' identified by '密码';     //添加用户
+drop user '用户名'@'主机名';                           //删除用户
+update user set password = password('新密码') where user= '用户名';//修改用户密码
+set password for '用户名'@'主机名' = password('新密码'); //修改用户密码           
+select * from user;                                   //查询用户
+权限
+show grants for '用户名'@'主机名';                     //查看权限
+grant 权限列表 on 数据库.表名 to '用户名'@'主机名';       //授予权限
+grant all on *.* to '用户名'@'主机名';                 //授予用户所有权限
+revoke 权限列表 on 数据库.库名 to '用户名'@'主机名';      //撤销权限
+权限列表:create|alter|drop|isnert|update|delete|select
+
+show [full] processlist;                               //显示正在运行的线程
+kill processlist_id                                 //杀死一个线程
+```
+
 **4. 事务** 
 
 ```

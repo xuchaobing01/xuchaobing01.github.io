@@ -46,21 +46,26 @@ select a.aname,b.bname from a left join  b on a.id=b.aid;             //左连�
 select a.aname,b.bname from a right join  b on a.id=b.aid;            //右连接查询
 (select name,age from user) union (select avator,sex from admin);     //union查询
 (select name,age from user) union all (select avator,sex from admin); //unionall查询
+
 SELECT COUNT(*) as num, last_name, first_name                          //统计重复数据
     -> FROM person
     -> GROUP BY last_name, first_name
     -> HAVING num > 1;
+
 SELECT DISTINCT last_name, first_name
     -> FROM person;                                                     //过滤重复数据
+
 SELECT last_name, first_name
     -> FROM person
     -> GROUP BY (last_name, first_name);                                //过滤重复数据
+
 CREATE TABLE tmp SELECT last_name, first_name, sex FROM person  GROUP BY (last_name, first_name, sex);
 DROP TABLE person;
 ALTER TABLE tmp RENAME TO person;                                       //删除重复数据
+
 ```
 
-**3. DDl** 
+**3. DDL** 
 
 ```
 create table 表名(列名 列类型 属性 ....,) engine=Innodb default charset=utf8; //建表
@@ -101,7 +106,7 @@ drop table 视图名;                                                           
 show table status \G                                                         //查看库中表的信息                       
 ```
 
-**4. DCl** 
+**4. DCL** 
 
 ```
 用户

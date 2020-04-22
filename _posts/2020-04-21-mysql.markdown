@@ -46,6 +46,18 @@ select a.aname,b.bname from a left join  b on a.id=b.aid;             //左连�
 select a.aname,b.bname from a right join  b on a.id=b.aid;            //右连接查询
 (select name,age from user) union (select avator,sex from admin);     //union查询
 (select name,age from user) union all (select avator,sex from admin); //unionall查询
+SELECT COUNT(*) as num, last_name, first_name                          //统计重复数据
+    -> FROM person
+    -> GROUP BY last_name, first_name
+    -> HAVING num > 1;
+SELECT DISTINCT last_name, first_name
+    -> FROM person;                                                     //过滤重复数据
+SELECT last_name, first_name
+    -> FROM person
+    -> GROUP BY (last_name, first_name);                                //过滤重复数据
+CREATE TABLE tmp SELECT last_name, first_name, sex FROM person  GROUP BY (last_name, first_name, sex);
+DROP TABLE person;
+ALTER TABLE tmp RENAME TO person;                                       //删除重复数据
 ```
 
 **3. DDl** 
@@ -89,7 +101,7 @@ drop table 视图名;                                                           
 show table status \G                                                         //查看库中表的信息                       
 ```
 
-**3. DCl** 
+**4. DCl** 
 
 ```
 用户
@@ -105,11 +117,12 @@ grant all on *.* to '用户名'@'主机名';                 //授予用户所�
 revoke 权限列表 on 数据库.库名 to '用户名'@'主机名';      //撤销权限
 权限列表:create|alter|drop|isnert|update|delete|select
 
-show [full] processlist;                               //显示正在运行的线程
-kill processlist_id                                 //杀死一个线程
+show [full] processlist;     //显示正在运行的线程
+kill processlist_id          //杀死一个线程
+flush privileges             //刷新
 ```
 
-**4. 事务** 
+**5. 事务** 
 
 ```
 start transaction; //开始事务
@@ -117,7 +130,7 @@ commit;            //提交
 rollback;          //回滚
 ```
 
-**5. 实用 `SQL` 语句**
+**6. 实用 `SQL` 语句**
 
 5.1 插入或替换
 

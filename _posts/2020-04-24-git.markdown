@@ -1,0 +1,160 @@
+---
+layout:     post
+title:      "Git"
+subtitle:   "Git常用语句！"
+date:       2020-04-24 13:52:00
+author:     "Sean"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - Git
+---
+
+**1. BASE** 
+
+```
+git config --global user.name "Your Name"          //设置用户名
+git config --global user.email "email@example.com" //设置邮箱
+
+git init                        //初始化一个Git仓库
+git status                      //查看仓库的当前状态
+git add readme.txt              //把文件添加到仓库
+git diff readme.txt             //查看修改内容
+git checkout -- readme.txt      //从工作区撤销修改
+git commit -m "write a readme file" //把文件提交到仓库
+git reset HEAD readme.txt       //从暂存区撤销修改
+git diff HEAD -- readme.txt     //查看工作区和版本库最新版本的区别
+git rm readme.txt               //删除文件
+git mv README  README.md        //移动或重命名
+```
+
+**2. 时空穿梭 - 版本回滚** 
+
+```
+git log                             //查看日志
+git log --pretty=oneline            //查看日志简化内容
+git reset --hard [版本id|HEAD|HEAD^|HEAD^|HEAD^^|HEAD~100] //版本回退到指定版本 HEAD当前版本，HEAD^上一个，HEAD^^上上一个，HEAD~100上100个
+get reflog                          //查看历史命令记录以便查找到未来commitId
+
+git log --oneline                   //oneline选项来查看历史记录的简洁的版本。
+git log --graph                     //graph选项查看历史中什么时候出现了分支、合并
+git log --author=Linus --oneline -5 //查找指定用户的提交日志可以使用命令
+git log --reverse --oneline         //reverse参数来逆向显示所有日志
+git log --oneline --before={3.weeks.ago} --after={2010-04-18} --no-merges //筛选查看
+```
+
+**3. 远程仓库** 
+
+```
+ssh-keygen -t rsa -C "youremail@example.com"; //创建SSH Key 创建前先检测是否已创建过 使用git的ssh协议比https快 
+
+.ssh                        //在用户主目录下
+├── id_rsa                  //私钥
+└── id_rsa.pub              //公钥
+
+git remote                  //列出已经存在的远程分支
+git remote -v               //查看本地添加了哪些远程分支
+git remote add origin git@github.com:michaelliao/learngit.git //origin(远程之意)本地仓库关联远程仓库
+git remote remove origin    //删除本地指定的远程分支
+
+git push origin master      //本地内容推送到远程(实际是把本地master推送到远程)
+git clone git@github.com:michaelliao/gitskills.git  //克隆远程仓库到本地                                                       //查看库中表的信息                       
+```
+
+**4. 平行宇宙 - 分支管理** 
+
+```
+git fetch -p                          //获取被删减后的远程分支，
+git branch [-a|-v|-vv]                //查看分支 -a显示所有远程和本地 -v显示分支信息 -vv会显示上游分支的名字
+git branch 分支名                      //创建分支
+git checkout -b develop origin/master //基于origin/master创建并切换到develop分支
+git switch -c develop                 //创建并切换到develop分支，git新版本
+git checkout 分支名                    //切换分支
+git switch 分支名                      //切换分支，git新版
+git merge develop                     //合并develop分支到当前分支
+git merge --no-ff -m "merge with no-ff" dev //no Fast forward模式合并分支，多一次commit提交，删除分支后保留分支历史信息
+git branch -d develop                 //删除本地develop分支
+git branch -D develop                 //强行删除一个没有被合并过的本地develop分支
+git push origin :分支名                //删除远程分支
+git log --graph --pretty=oneline --abbrev-commit//查看分支合并图
+
+git stash                             //保存工作现场
+git stash list                        //查看现场列表
+git stash apply [stash@{0}]           //恢复现场不删除stash
+git stash drop [stash@{0}]            //删除现场
+git stash pop                         //恢复现场并删除现场内容
+git cherry-pick 4c805e2               //修复Bug时把在master上提交的修改复制到当前分支commitId，避免重复劳动
+git branch --set-upstream-to=origin/dev dev //设置本地dev分支和远程origin/dev关联跟踪 
+git rebase                            //把本地未push的分叉提交历史整理成直线
+```
+
+**5. 标签管理** 
+
+```
+git tag                 //查看标签
+git tag v1.0            //打标签
+git tag v0.9 f52c633    //根据commitid打标签
+git tag -a v0.1 -m "备注" f52c633 //根据commitid打标签并备注 
+git show v0.9           //查看标签信息
+git tag -d v0.1         //删除本地标签
+git push origin v1.0    //标签推送到远程
+git push origin --tags  //一次性推送全部本地标签到远程
+git push origin :refs/tags/v0.9     //删除远程标签
+
+```
+
+**6. OTHER**
+
+```
+.gitignore                         //忽略特殊文件，如:*.egg
+git config --global color.ui true; //适当显示不同颜色
+
+- 同时关联两个远程版本库
+git remote -v
+git remote rm origin
+git remote add github git@github.com:michaelliao/learngit.git
+git remote add gitee git@gitee.com:liaoxuefeng/learngit.git
+git push github master
+git push gitee master
+
+-  配置别名 - 偷懒
+git config --global alias.st status     //git st = git status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.unstage 'reset HEAD'
+git config --global alias.last 'log -1'
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+![](/img/in-post/post-git/post-git-both.jpg "同时关联两个远程版本库")
+
+***
+
+Git的官方网站：[http://git-scm.com](http://git-scm.com "Git官网"){:target="_blank"}
+
+Gitee的官方网站(国内快)：[https://gitee.com/](https://gitee.com/ "Gitee官网"){:target="_blank"}
+
+Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf "Git Cheat Sheet"){:target="_blank"}
+
+***
+
+**`Git` 与 `SVN` 区别**
+
+- 集中式 & 分布式
+
+![](/img/in-post/post-git/post-git-svn.jpg "Git与SVN区别")
+    
+**`Git` 工作区、暂存区和版本库**
+
+![](/img/in-post/post-git/post-git-stage.jpg "Git工作区、暂存区和版本库")
+
+**`Git Cheat Sheet`**
+
+![](/img/in-post/post-git/post-git-cheat-sheet.jpg "Git Cheat Sheet")
+
+
+
+
+
+
+
+

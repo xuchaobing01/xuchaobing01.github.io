@@ -1,0 +1,240 @@
+---
+layout:     post
+title:      "Mysql篇"
+subtitle:   "Mysql数据库常用语句！"
+date:       2020-04-21 20:00:00
+author:     "Sean"
+header-img: "img/post-bg-mysql-2020.jpg"
+tags:
+    - Mysql
+---
+
+
+**1. BASE** 
+
+```
+UNIX_TIMESTAMP('2018-10-11 14:22:51'); //日期时间转时间戳
+FROM_UNIXTIME(1567267200,'%Y-%m-%d %H:%i:%s') //时间戳转日期
+
+mysqld.exe; //服务
+mysql.exe; //客户端
+mysql -h localhost -u username -p; //连接数据库
+set names utf8;                   //设置字符集
+show databases;                   //查看所有库
+use 库名;                          //进入到某个库
+show tables;                      //查看所有的表
+desc 表名;                         //查看表结构
+show variables like '%charact%';  //查看变量
+set 变量名=值；                    //设置变量值
+explain select * from user where user ming ='san' \G;//查看索引是否发挥作用
+mysqldump -u root -p RUNOOB 表名 > dump.txt //导出数据
+mysql -u root -p 库名 < dump.txt //导入数据
+```
+
+**2. DML** 
+
+```
+insert into 表名 (id,name) values(1,'lisi');    //增
+delete from 表名 where id=3;                    //删
+update 表名 set name='yumi' where id=2;         //改
+select * from user where id=2;                  //查
+select gid,gname from goods where gid in (select max(id) from goods group by cid); //where子查询
+select gid,gname,cid from (select gid,cd,gname from goods order by cid asc,gid desc) as tmp group by cid;//from子查询
+select * from category where exists (select * from goods where category.cid=goods.cid); //exists子查询
+select a.aname,b.bname from a inner join b on a.id=b.aid;             //连接查询
+select a.aname,b.bname from a left join  b on a.id=b.aid;             //左连接查询
+select a.aname,b.bname from a right join  b on a.id=b.aid;            //右连接查询
+(select name,age from user) union (select avator,sex from admin);     //union查询
+(select name,age from user) union all (select avator,sex from admin); //unionall查询
+
+SELECT COUNT(*) as num, last_name, first_name                          //统计重复数据
+    -> FROM person
+    -> GROUP BY last_name, first_name
+    -> HAVING num > 1;
+
+SELECT DISTINCT last_name, first_name
+    -> FROM person;                                                     //过滤重复数据
+
+SELECT last_name, first_name
+    -> FROM person
+    -> GROUP BY (last_name, first_name);                                //过滤重复数据
+
+CREATE TABLE tmp SELECT last_name, first_name, sex FROM person  GROUP BY (last_name, first_name, sex);
+DROP TABLE person;
+ALTER TABLE tmp RENAME TO person;                                       //删除重复数据
+
+```
+
+**3. DDL** 
+
+```
+create table 表名(列名 列类型 属性 ....,) engine=Innodb default charset=utf8; //建表
+drop table 表名;                                                             //删表
+rename table oldname to newname;                                             //改表名
+show tables;                                                                 //查看表
+show table status \G                                                         //查看库中表的信息
+desc 表名;                                                                   //查看表结构
+show create table 表名;                                                      //查看建表结构
+delete from 表名;                                                            //删除表所有数据
+truncate 表名;                                                               //删除表重新建一个一样的表
+
+alter table 表名 add 列名 列类型 列属性...;                                    //添加列，默认在表的最后
+alter table 表名 add 列名 列类型 列属性... after 列名;                         //添加列,指定列后面
+alter table 表名 add 列名 列类型 列属性... first;                              //添加列为第1列
+alter table 表名 change 旧列名 新列名 新类型 列属性....;                        //改列 可改列名
+alter table 表名 modify 列名 新属性....;                                       //改列
+alter table 表名 drop [column] 列名;                                           //删除列
+alter table 表名 alter 列名 set default 1000;                                 //修改列的默认值
+alter table 表名 alter 列名 drop default;                                     //删除列的默认值
+alter table 表名 engine=myisam;                                               //修改表存储引擎
+alter table 表名 drop foreign key 外键名;                                        //删除外键约束
+alter table 表名 rename to 新表名;                                             //修改表名
+
+
+show index from 表名;                                                        //查看索引
+show create table 表名;                                                      //查看索引
+alter table 表名 drop index 索引名;                                           //删除索引
+alter table 表名 add index/unique xm(xing,ming);                             //添加索引
+alter table 表名 add primary key(id);                                        //添加主键索引
+alter table 表名 drop primary key;                                           //删除主键索引
+
+create view vuser as select id,name from user;                               //创建视图
+show tables;                                                                 //查看视图
+desc 视图名;                                                                 //查看视图结构  
+show create view 视图名;                                                      //查看视图创建语句
+drop table 视图名;                                                            //删除视图
+show table status \G                                                         //查看库中表的信息                       
+```
+
+**4. DCL** 
+
+```
+用户
+create user '用户名'@'主机名' identified by '密码';     //添加用户
+drop user '用户名'@'主机名';                           //删除用户
+update user set password = password('新密码') where user= '用户名';//修改用户密码
+set password for '用户名'@'主机名' = password('新密码'); //修改用户密码           
+select * from user;                                   //查询用户
+权限
+show grants for '用户名'@'主机名';                     //查看权限
+grant 权限列表 on 数据库.表名 to '用户名'@'主机名';       //授予权限
+grant all on *.* to '用户名'@'主机名';                 //授予用户所有权限
+revoke 权限列表 on 数据库.库名 to '用户名'@'主机名';      //撤销权限
+权限列表:create|alter|drop|isnert|update|delete|select
+
+show [full] processlist;     //显示正在运行的线程
+kill processlist_id          //杀死一个线程
+flush privileges             //刷新
+set profiling=1;            //开启查询记录
+show profiles;              //跟踪查询记录
+```
+
+**5. 事务** 
+
+```
+start transaction; //开始事务
+commit;            //提交
+rollback;          //回滚
+```
+
+**6. 实用 `SQL` 语句**
+
+- 6.1 插入或替换
+
+&emsp;&ensp;如果我们希望插入一条新记录(`INSERT`)，但如果记录已经存在，就先删除原记录，再插入新记录。此时，可以使用`REPLACE`语句，这样就不必先查询，再决定是否先删除再插入：
+
+```
+REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99);
+```
+    
+&emsp;&ensp;若`id=1`的记录不存在，`REPLACE`语句将插入新记录，否则，当前`id=1`的记录将被删除，然后再插入新记录。
+
+
+- 6.2 插入或更新
+
+&emsp;&ensp;如果我们希望插入一条新记录(`INSERT`)，但如果记录已经存在，就更新该记录，此时，可以使用`INSERT INTO ... ON DUPLICATE KEY UPDATE ...`语句：
+
+```
+INSERT INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99) ON DUPLICATE KEY UPDATE name='小明', gender='F', score=99;
+```
+
+&emsp;&ensp;若`id=1`的记录不存在，`INSERT`语句将插入新记录，否则，当前`id=1`的记录将被更新，更新的字段由`UPDATE`指定。
+
+
+- 6.3 插入或忽略
+
+&emsp;&ensp;如果我们希望插入一条新记录(`INSERT`)，但如果记录已经存在，就啥事也不干直接忽略，此时，可以使用`INSERT IGNORE INTO ...`语句：
+
+```
+INSERT IGNORE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99);
+```
+
+&emsp;&ensp;若`id=1`的记录不存在，`INSERT`语句将插入新记录，否则，不执行任何操作。
+
+
+- 6.4 快照
+
+&emsp;&ensp;如果想要对一个表进行快照，即复制一份当前表的数据到一个新表，可以结合`CREATE TABLE和SELECT`：
+
+```
+-- 对class_id=1的记录进行快照，并存储为新表students_of_class1:
+CREATE TABLE students_of_class1 SELECT * FROM students WHERE class_id=1;
+```
+
+&emsp;&ensp;新创建的表结构和`SELECT`使用的表结构完全一致。
+
+
+- 6.5 写入查询结果集
+
+&emsp;&ensp;如果查询结果集需要写入到表中，可以结合`INSERT`和`SELECT`，将`SELECT`语句的结果集直接插入到指定表中。
+    
+&emsp;&ensp;例如，创建一个统计成绩的表`statistics`，记录各班的平均成绩：
+
+```
+CREATE TABLE statistics (
+       id BIGINT NOT NULL AUTO_INCREMENT,
+       class_id BIGINT NOT NULL,
+       average DOUBLE NOT NULL,
+       PRIMARY KEY (id)
+ );
+```
+
+&emsp;&ensp;然后，我们就可以用一条语句写入各班的平均成绩：
+    
+```
+INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM students GROUP BY class_id
+```
+
+&emsp;&ensp;确保`INSERT`语句的列和`SELECT`语句的列能一一对应，就可以在`statistics`表中直接保存查询的结果：
+
+```
+SELECT * FROM statistics;
++----+----------+--------------+
+| id | class_id | average      |
++----+----------+--------------+
+|  1 |        1 |         86.5 |
+|  2 |        2 | 73.666666666 |
+|  3 |        3 | 88.333333333 |
++----+----------+--------------+
+3 rows in set (0.00 sec)
+```
+
+
+- 6.6 强制使用指定索引
+
+&emsp;&ensp;在查询的时候，数据库系统会自动分析查询语句，并选择一个最合适的索引。但是很多时候，数据库系统的查询优化器并不一定总是能使用最优索引。如果我们知道如何选择索引，可以使用`FORCE INDEX`强制查询使用指定的索引。例如：
+
+```
+SELECT * FROM students FORCE INDEX (idx_class_id) WHERE class_id = 1 ORDER BY id DESC;
+```
+
+&emsp;&ensp;指定索引的前提是索引`idx_class_id`必须存在。
+    
+    
+    
+
+
+
+
+
+

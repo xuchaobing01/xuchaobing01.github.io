@@ -1,0 +1,64 @@
+---
+layout:     post
+title:      "Linux篇"
+subtitle:   "玩转那些实用的Linux命令！"
+date:       2018-06-17 10:00:00
+author:     "Sean"
+header-img: "img/post-bg-unix-linux.jpg"
+tags:
+    - Linux
+---
+
+**1. `Shell`判断一个进程不存在执行，存在不执行** 
+
+```
+#!/bin/bash
+
+processNum = `ps -ef|grep processName|grep -v grep|wc -l`;
+
+if [[ $processNum -eq 0 ]]
+then                    
+    nohup /usr/local/php/bin/php /www/project/cli.php Cron/SyncQueue/consumer >>/data/logs/processName_`date +%Y%m%d`.log &       
+fi
+
+//注意：shell脚本的名字不要和进程名同名，否则Linux执行文件也算进程，你的进程始终大于0，你的脚本始终无法执行。
+```
+
+如果你需要你的脚本每5分钟去执行一次，只需要
+
+`crontab -e`
+
+然后添加
+
+`*/5 * * * * /home/task/taskName.sh`
+
+**2. 统计当前文件夹下的文件个数，目录个数**
+
+- 2.1 统计当前文件夹下文件个数，包括子文件夹里的
+
+    > `ls -lR|grep "^-"|wc -l`
+
+- 2.2 统计当前文件夹下目录个数，包括子文件夹里的
+
+    > `ls -lR|grep "^d"|wc -l`
+
+- 2.3 统计当前文件夹下文件个数
+
+    > `ls -l|grep "^-"|wc -l`
+
+- 2.4 统计当前文件夹下目录个数
+
+    > `ls -l|grep "^d"|wc -l`
+
+附：
+
+统计输出信息的行数
+
+> `wc -l`
+
+将长列表输出信息进行过滤，只保留匹配中目标，如果只保留目录就是`^d`
+
+> `grep "^-"`
+
+
+

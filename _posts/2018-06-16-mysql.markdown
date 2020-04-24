@@ -1,0 +1,39 @@
+---
+layout:     post
+title:      "Mysql优化"
+subtitle:   "来啊，让你的查询更快吧！"
+date:       2018-06-16 20:00:00
+author:     "Sean"
+header-img: "img/post-bg-universe.jpg"
+tags:
+    - Mysql
+---
+
+**1. COUNT** 
+
+`count(1)`比`count(*)`快
+
+```
+同一个表，80万数据
+SELECT count(*) FROM table;//2.229s
+SELECT count(1) FROM table;//0.638s
+```
+
+**2. OR**
+
+`IN`和`UNION`代替`OR`
+
+```
+原sql：
+SELECT * FROM table WHERE id = 1 OR id = 3;
+优化后sql:
+SELECT * FROM table WHERE id IN('1,3');
+
+原sql：
+SELECT * FROM table WHERE phone = 18782962567 OR username = '张三';
+优化后sql:
+SELECT * FROM table WHERE phone = 18782962567 UNION 
+SELECT * FROM table WHERE username = '张三';
+```
+
+

@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "Git篇"
+title:      "Git"
 subtitle:   "Git常用语句！"
 date:       2020-04-24 13:52:00
 author:     "Sean"
-header-img: "img/post-bg-git.jpg"
+header-img: "img/post-bg-2015.jpg"
 tags:
     - Git
 ---
@@ -125,7 +125,7 @@ git config --global alias.last 'log -1'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
-![](img/in-post/post-git/post-git-both.jpg)
+![](/img/in-post/post-git/post-git-both.jpg)
 
 ***
 
@@ -137,15 +137,15 @@ Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/
 
 **`Git` 与 `SVN` 区别**
 
-![](img/in-post/post-git/post-git-svn.jpg)
+![](/img/in-post/post-git/post-git-svn.jpg)
     
 **`Git` 工作区、暂存区和版本库**
 
-![](img/in-post/post-git/post-git-stage.jpg)
+![](/img/in-post/post-git/post-git-stage.jpg)
 
 **`Git Cheat Sheet`**
 
-![](img/in-post/post-git/post-git-cheat-sheet.jpg)
+![](/img/in-post/post-git/post-git-cheat-sheet.jpg)
 
 
 

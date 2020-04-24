@@ -141,25 +141,16 @@ Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/
 
 - 集中式 & 分布式
 
-<div style="text-align: center;">
-
 ![](/img/in-post/post-git/post-git-svn.jpg "Git与SVN区别")
-</div>
-
     
 **`Git` 工作区、暂存区和版本库**
 
-<div style="text-align: center;">
-
 ![](/img/in-post/post-git/post-git-stage.jpg "Git工作区、暂存区和版本库")
-</div>
 
 **`Git Cheat Sheet`**
 
-<div style="text-align: center;">
-
 ![](/img/in-post/post-git/post-git-cheat-sheet.jpg "Git Cheat Sheet")
-</div>
+
 
 
 

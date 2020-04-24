@@ -129,23 +129,25 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 ***
 
-Git的官方网站：[http://git-scm.com](http://git-scm.com)
+Git的官方网站：[http://git-scm.com](http://git-scm.com?_blank "Git官网")
 
-Gitee的官方网站(国内快)：[https://gitee.com/](https://gitee.com/)
+Gitee的官方网站(国内快)：[https://gitee.com/](https://gitee.com/?_blank "Gitee官网")
 
-Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf)
+Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf?_blank "Git Cheat Sheet")
 
 **`Git` 与 `SVN` 区别**
 
-![](/img/in-post/post-git/post-git-svn.jpg)
+- 集中式 & 分布式
+
+![Git与SVN区别](/img/in-post/post-git/post-git-svn.jpg)
     
 **`Git` 工作区、暂存区和版本库**
 
-![](/img/in-post/post-git/post-git-stage.jpg)
+![Git工作区、暂存区和版本库](/img/in-post/post-git/post-git-stage.jpg)
 
 **`Git Cheat Sheet`**
 
-![](/img/in-post/post-git/post-git-cheat-sheet.jpg)
+![Git Cheat Sheet](/img/in-post/post-git/post-git-cheat-sheet.jpg)
 
 
 

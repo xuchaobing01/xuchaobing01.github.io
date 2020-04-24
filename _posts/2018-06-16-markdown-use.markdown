@@ -74,12 +74,12 @@ Markdown是一种轻量级的**标记语言**，文本编辑器，被广泛运�
 
 ```
 语法：![](image-url)
-例子：![](https://raw.githubusercontent.com/xuchaobing01/xuchaobing01.github.io/master/img/post-markdown.jpg)
+例子：![](/blog/img/post-markdown.jpg "图片示例")
 ```
 
 效果：
 
-![](https://raw.githubusercontent.com/xuchaobing01/xuchaobing01.github.io/master/img/post-markdown.jpg)
+![](/blog/img/post-markdown.jpg "图片示例")
 
 ## 4.加粗`**文字**`
 

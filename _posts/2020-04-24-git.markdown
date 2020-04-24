@@ -129,11 +129,11 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 ***
 
-Git的官方网站：[http://git-scm.com](http://git-scm.com?_blank "Git官网")
+Git的官方网站：[http://git-scm.com](http://git-scm.com "Git官网"){:target="_blank"}
 
-Gitee的官方网站(国内快)：[https://gitee.com/](https://gitee.com/?_blank "Gitee官网")
+Gitee的官方网站(国内快)：[https://gitee.com/](https://gitee.com/ "Gitee官网"){:target="_blank"}
 
-Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf?_blank "Git Cheat Sheet")
+Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf "Git Cheat Sheet"){:target="_blank"}
 
 ***
 

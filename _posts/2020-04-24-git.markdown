@@ -135,6 +135,8 @@ Gitee的官方网站(国内快)：[https://gitee.com/](https://gitee.com/?_blank
 
 Git Cheat Sheet(命令大全)：[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf?_blank "Git Cheat Sheet")
 
+***
+
 **`Git` 与 `SVN` 区别**
 
 - 集中式 & 分布式

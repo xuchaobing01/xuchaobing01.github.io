@@ -1,6 +1,6 @@
 # Hux blog 模板
 
-### [我的博客在这里 &rarr;](http://huxpro.github.io)
+### [我的博客在这里 &rarr;](https://chaobing.gitee.io/blog/)
 
 
 ### 关于收到"Page Build Warning"的email
@@ -27,7 +27,7 @@
 $ git clone git@github.com:Huxpro/huxblog-boilerplate.git
 ```
 
-**[在这里预览模板 &rarr;](http://huangxuan.me/huxblog-boilerplate/)**
+**[在这里预览模板 &rarr;](https://chaobing.gitee.io/blog/)**
 
 ## 各版本特性
 

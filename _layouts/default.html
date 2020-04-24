@@ -30,10 +30,10 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
         if (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) {
             var script = document.createElement("script");
             script.type = "text/javascript";
-            script.color = "0,133,161";
+            //script.color = "0,133,161";
             script.opacity = "0.7";
             script.zIndex = "-2";
-            script.count = "100000";
+            script.count = "1000000";
             script.src = "/blog/js/canvas-nest.js";
             document.getElementsByTagName('body')[0].appendChild(script);
         }

@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: xuchaobing01@163.com
 description: "关于PHP程序员、踩到的坑 | 肖恩，Web & PHP Lover | 这里是 @Sean肖恩 的个人博客，与你一起发现更大的世界。"
 keyword: "肖恩, Sean, @Sean, 肖恩的博客, Sean Blog, 博客, 个人网站, 互联网, PHP, Mysql, PHPer, Web, linux, 后端 "
-url: "https://chaobing.gitee.io/blog"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://chaobing.gitee.io/blog/"              # your host, for absolute URL
+baseurl: "/blog"                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true

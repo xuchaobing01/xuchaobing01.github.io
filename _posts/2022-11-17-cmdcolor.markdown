@@ -38,19 +38,30 @@ tags:
 
 ![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-background-show.png "背景颜色")
 
-**2. `软件开发`**
+**2. `显示方式表`**
 
+|   显示方式     |   效果             |
+|:-------------:|:-----------------:|
+| **0**		    | 终端默认显示        |
+| **1**		    | 高亮显示 		    |
+| **4**  		| 使用下划线          |
+| **5**  		| 闪烁               |
+| **7**  		| 反白显示            |
+| **8**  		| 不可见              |
 
+**3. `字体和背景颜色表`**
 
-**3. `图`**
+| 字体色         | 背景色         | 颜色           | 颜色展示                                                                                                                  |
+|:-------------:|:-------------:|:-------------:|:-------------------------------------------------------------------------------------------------------------------------|
+| **30**		| **40**        | 黑色           | ![](/blog/img/in-post/post-cmdcolor/f-black.png "黑色字体")![](/blog/img/in-post/post-cmdcolor/b-black.png "黑色背景")     ｜
+| **31**		| **41**        | 红色           | ![](/blog/img/in-post/post-cmdcolor/f-red.png "红色字体")![](/blog/img/in-post/post-cmdcolor/b-red.png "红色背景")         ｜
+| **32**		| **42**        | 绿色           | ![](/blog/img/in-post/post-cmdcolor/f-green.png "绿色字体")![](/blog/img/in-post/post-cmdcolor/b-green.png "绿色背景")     ｜
+| **33**		| **43**        | 黄色           | ![](/blog/img/in-post/post-cmdcolor/f-yellow.png "黄色字体")![](/blog/img/in-post/post-cmdcolor/b-yellow.png "黄色背景")   ｜
+| **34**		| **44**        | 紫色           | ![](/blog/img/in-post/post-cmdcolor/f-purple.png "紫色字体")![](/blog/img/in-post/post-cmdcolor/b-purple.png "紫色背景")   ｜
+| **35**		| **45**        | 粉色           | ![](/blog/img/in-post/post-cmdcolor/f-pink.png "粉色字体")![](/blog/img/in-post/post-cmdcolor/b-pink.png "粉色背景")       ｜
+| **36**		| **46**        | 蓝色           | ![](/blog/img/in-post/post-cmdcolor/f-blue.png "蓝色字体")![](/blog/img/in-post/post-cmdcolor/b-blue.png "蓝色背景")       ｜
+| **37**		| **47**        | 白色           | ![](/blog/img/in-post/post-cmdcolor/f-white.png "白色字体")![](/blog/img/in-post/post-cmdcolor/b-white.png "白色背景")     ｜
 
- 
-
-**4. `音乐`**
-
- 
-
-**5. `学习`**
 
 
 

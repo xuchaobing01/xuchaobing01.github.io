@@ -13,30 +13,28 @@ tags:
 
 **1. `语法`**
 
-- 语法
-
 ```
 \033[显示方式;字体色;背景色m 输出内容 \033[0m
 ```
 
-- 语法解析
+**语法解析**
 
 ```
 \033[显示方式;字体色;背景色m  //打印效果设置开始 (设置后面输出内容的颜色)
 \033[0m                    //打印效果恢复到系统默认效果 (可以理解为打印效果结束)
 ```
 
-- 字体颜色
+**字体颜色**
 
-![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor.png "字体颜色")
+![](/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor.png "字体颜色")
 
-![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor-show.png "字体颜色")
+![](/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor-show.png "字体颜色")
 
-- 背景颜色
+**背景颜色**
 
-![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-background.png "背景颜色")
+![](/img/in-post/post-cmdcolor/post-cmdcolor-background.png "背景颜色")
 
-![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-background-show.png "背景颜色")
+![](/img/in-post/post-cmdcolor/post-cmdcolor-background-show.png "背景颜色")
 
 **2. `显示方式表`**
 
@@ -51,16 +49,16 @@ tags:
 
 **3. `字体和背景颜色表`**
 
-| 字体色         | 背景色         | 颜色           | 颜色展示                                                                                                                  |
-|:-------------:|:-------------:|:-------------:|:-------------------------------------------------------------------------------------------------------------------------|
-| **30**		| **40**        | 黑色           | ![](/blog/img/in-post/post-cmdcolor/f-black.png "黑色字体")![](/blog/img/in-post/post-cmdcolor/b-black.png "黑色背景")     ｜
-| **31**		| **41**        | 红色           | ![](/blog/img/in-post/post-cmdcolor/f-red.png "红色字体")![](/blog/img/in-post/post-cmdcolor/b-red.png "红色背景")         ｜
-| **32**		| **42**        | 绿色           | ![](/blog/img/in-post/post-cmdcolor/f-green.png "绿色字体")![](/blog/img/in-post/post-cmdcolor/b-green.png "绿色背景")     ｜
-| **33**		| **43**        | 黄色           | ![](/blog/img/in-post/post-cmdcolor/f-yellow.png "黄色字体")![](/blog/img/in-post/post-cmdcolor/b-yellow.png "黄色背景")   ｜
-| **34**		| **44**        | 紫色           | ![](/blog/img/in-post/post-cmdcolor/f-purple.png "紫色字体")![](/blog/img/in-post/post-cmdcolor/b-purple.png "紫色背景")   ｜
-| **35**		| **45**        | 粉色           | ![](/blog/img/in-post/post-cmdcolor/f-pink.png "粉色字体")![](/blog/img/in-post/post-cmdcolor/b-pink.png "粉色背景")       ｜
-| **36**		| **46**        | 蓝色           | ![](/blog/img/in-post/post-cmdcolor/f-blue.png "蓝色字体")![](/blog/img/in-post/post-cmdcolor/b-blue.png "蓝色背景")       ｜
-| **37**		| **47**        | 白色           | ![](/blog/img/in-post/post-cmdcolor/f-white.png "白色字体")![](/blog/img/in-post/post-cmdcolor/b-white.png "白色背景")     ｜
+| 字体色         | 背景色         | 颜色描述        |
+|:-------------:|:-------------:|:-------------:|
+| **30**		| **40**        | 黑色           |
+| **31**		| **41**        | 红色           |
+| **32**		| **42**        | 绿色           |
+| **33**		| **43**        | 黄色           |
+| **34**		| **44**        | 紫色           |
+| **35**		| **45**        | 粉色           |
+| **36**		| **46**        | 蓝色           |
+| **37**		| **47**        | 白色           |
 
 
 

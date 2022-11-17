@@ -1,6 +1,6 @@
 # Hux Blog
 
-### [View Live Hux Blog &rarr;](https://chaobing.gitee.io/blog/)
+### [View Live Hux Blog &rarr;](https://chaobing.gitee.io/)
 
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 
@@ -14,7 +14,7 @@ Want to clone a boilerplate instead of my buzz blog? Here comes this!
 $ git clone git@github.com:Huxpro/huxblog-boilerplate.git
 ```
 
-**[View Boilerplate Here &rarr;](https://chaobing.gitee.io/blog/)**
+**[View Boilerplate Here &rarr;](https://chaobing.gitee.io/)**
 
 
 ## Porting 

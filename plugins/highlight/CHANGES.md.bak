@@ -1129,7 +1129,7 @@ Overall highlight.js currently supports 51 languages and 20 style themes.
 
 [node.js]: http://nodejs.org/
 [api]: http://softwaremaniacs.org/wiki/doku.php/highlight.js:api
-[p]: http://softwaremaniacs.org/blog/2012/05/10/http-and-json-in-highlight-js/en/
+[p]: http://softwaremaniacs.org/2012/05/10/http-and-json-in-highlight-js/en/
 [pojoaque]: http://web-cms-designs.com/ftopict-10-pojoaque-style-for-highlight-js-code-highlighter.html
 [ao]: https://github.com/angelolloqui
 [ar]: https://github.com/raleksandar
@@ -1213,7 +1213,7 @@ bugs.
 Developer overview of the new language syntax is available in a [blog post about
 recent beta release][beta].
 
-[beta]: http://softwaremaniacs.org/blog/2011/04/25/highlight-js-60-beta/en/
+[beta]: http://softwaremaniacs.org/2011/04/25/highlight-js-60-beta/en/
 
 P.S. New version is not yet available on a Yandex CDN, so for now you have to
 download [your own copy][d].

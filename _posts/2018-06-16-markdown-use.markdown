@@ -16,7 +16,7 @@ tags:
 
 Markdown是一种轻量级的**标记语言**，文本编辑器，被广泛运用于写作上，规范文本格式。类似的编辑器还有百度[UEditor](http://ueditor.baidu.com/website/onlinedemo.html) .
 
-<!--[Markdown【基础篇】地址：](https://worktile.com/blog/skills/markdown)-->
+<!--[Markdown【基础篇】地址：](https://worktile.com/skills/markdown)-->
 
 ## 1. 标题(共六级标题，一般也就用到三级)
 
@@ -74,12 +74,12 @@ Markdown是一种轻量级的**标记语言**，文本编辑器，被广泛运�
 
 ```
 语法：![](image-url)
-例子：![](/blog/img/post-markdown.jpg "图片示例")
+例子：![](/img/post-markdown.jpg "图片示例")
 ```
 
 效果：
 
-![](/blog/img/post-markdown.jpg "图片示例")
+![](/img/post-markdown.jpg "图片示例")
 
 ## 4.加粗`**文字**`
 

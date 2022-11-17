@@ -19,18 +19,24 @@ tags:
 \033[显示方式;字体色;背景色m 内容 \033[0m
 ```
 
-- 示例
-
-![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor.png "终端颜色")
-
-![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor-show.png "终端颜色")
-
-**语法解析**
+- 语法解析
 
 ```
 \033[显示方式;字体色;背景色m  //打印效果设置开始 (设置后面输出内容的颜色)
 \033[0m                    //打印效果恢复到系统默认效果 (可以理解为打印效果结束)
 ```
+
+- 字体颜色
+
+![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor.png "字体颜色")
+
+![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor-show.png "字体颜色")
+
+- 背景颜色
+
+![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-background.png "背景颜色")
+
+![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-background-show.png "背景颜色")
 
 **2. `软件开发`**
 

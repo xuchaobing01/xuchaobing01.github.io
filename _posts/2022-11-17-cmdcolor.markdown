@@ -1,0 +1,54 @@
+---
+layout:     post
+title:      "CMD Color"
+subtitle:   "终端颜色"
+date:       2022-11-17 13:52:00
+author:     "Sean"
+header-img: "img/post-bg-universe.jpg"
+tags:
+    - Linux
+---
+
+**`CMD Color` 终端颜色**
+
+**1. `语法`**
+
+- 语法
+
+```
+\033[显示方式;字体色;背景色m 内容 \033[0m
+```
+
+- 示例
+
+![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor.png "终端颜色")
+
+![](/blog/img/in-post/post-cmdcolor/post-cmdcolor-fontcolor-show.png "终端颜色")
+
+**语法解析**
+
+```
+\033[显示方式;字体色;背景色m  //打印效果设置开始 (设置后面输出内容的颜色)
+\033[0m                    //打印效果恢复到系统默认效果 (可以理解为打印效果结束)
+```
+
+**2. `软件开发`**
+
+
+
+**3. `图`**
+
+ 
+
+**4. `音乐`**
+
+ 
+
+**5. `学习`**
+
+
+
+
+
+
+

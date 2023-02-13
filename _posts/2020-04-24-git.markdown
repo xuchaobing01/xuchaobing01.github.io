@@ -72,6 +72,7 @@ git checkout 分支名                    //切换分支
 git switch 分支名                      //切换分支，git新版
 git merge develop                     //合并develop分支到当前分支
 git merge --no-ff -m "merge with no-ff" dev //no Fast forward模式合并分支，多一次commit提交，删除分支后保留分支历史信息
+git merge --abort                     //撤销合并
 git branch -d develop                 //删除本地develop分支
 git branch -D develop                 //强行删除一个没有被合并过的本地develop分支
 git push origin :分支名                //删除远程分支
